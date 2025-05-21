@@ -11,8 +11,8 @@ RESET="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-#SCRIPT_RUNTIME=$(date | cut -d " " -f4)
-LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME.log"
+SCRIPT_RUNTIME=$(date | cut -d " " -f4)
+LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME/$SCRIPT_RUNTIME.log"
 
 mkdir -p $LOGS_FOLDER
 
