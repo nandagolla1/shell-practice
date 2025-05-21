@@ -14,7 +14,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 SCRIPT_RUNTIME=$(date +%Y-%m-%d_%H-%M-%S)
 LOG_FILE="$LOGS_FOLDER/$SCRIPT_NAME/$SCRIPT_RUNTIME.log"
 
-mkdir -p "$(dirname "$LOGS_FOLDER")"
+mkdir -p $LOGS_FOLDER
 
 
 if [ $USERID -ne 0 ]
