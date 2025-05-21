@@ -26,13 +26,13 @@ else
 fi
 
 PACKAGE_INSTALLER(){
-    dnf list installed $1 &>> LOG_FILE
+    dnf list installed $1 &>> $LOG_FILE
     if [ $? -ne 0 ]
     then
         echo -e "$1 is not installed, going to install it...${GREEN}Installing...${RESET}" &>> $LOG_FILE
 
 
-        dnf install $1 -y &>> LOG_FILE
+        dnf install $1 -y &>> $LOG_FILE
         if [ $? -ne 0 ]
         then
             echo -e "${RED}$1 not installed...${RESET}" &>> $LOG_FILE
