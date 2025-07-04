@@ -39,6 +39,7 @@ PACKAGE_INSTALLER(){
             exit 1
         else
             echo -e "$1 is ${GREEN}installed....${RESET}" | tee -a $LOG_FILE
+            exit 1
         fi
 
     else
